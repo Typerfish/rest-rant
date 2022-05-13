@@ -1,4 +1,5 @@
 // Needed Modules
+require('dotenv').config()
 const express = require('express')
 
 // Initialize
@@ -9,7 +10,12 @@ app.get('/', function (req,res) {
     res.send('Hello World')
 })
 
+// 404 Page
+app.get('*', (req, res) => {
+    res.status(404).send('<h1>404 Page</h1>')
+})
+
 // Listen
-app.listen(3000, function(){
+app.listen(process.env.PORT, function(){
     console.log('I am awake!')
 })
