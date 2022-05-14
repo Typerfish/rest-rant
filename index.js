@@ -7,10 +7,12 @@ const app = express()
 
 // Homepage
 app.get('/', function (req,res) {
-    res.send('Hello World')
+    res.render('home')
 })
 
 // Places
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-view').createEngine())
 app.use('/places', require('./Controllers/places'))
 
 // 404 Page
