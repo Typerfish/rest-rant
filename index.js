@@ -16,6 +16,7 @@ app.use(express.static('public'))
 
 // Controllers & Routes
 app.use('/places', require('./Controllers/places'))
+app.use(express.urlencoded({ extended: true }))
 
 // 404 Page
 app.get('*', (req, res) => {
