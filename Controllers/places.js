@@ -8,13 +8,13 @@ app.get('/', (req, res) => {
         city: 'Seattle',
         state: 'WA',
         cuisines: 'Thai, Pan-Asian',
-        pic: 'https://placekitten.com/250/250'
+        pic: '/images/restaurant-tables.webp'
     }, {
         name: 'Coding Cat Cafe',
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/Coffee-Cat.png'
     }]
     res.render('places/index', {places})
 })
